@@ -14,6 +14,7 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+
     <script>
       $(document).ready(function(){
         var socket = io();
@@ -31,7 +32,7 @@
         console.log("geklickt!")
         let vorname = $("#eingabe").val();
         socket.emit("newMessage", { vorname: vorname })
-        return false;     
+        return false;
         })
 
       })
